@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Parcare Publica Centru",
+    "region": "centru",
+    "places": 10,
+    "loadedIndices": 0.45,
+    "distance": 5600
+  },
+  {
+    "id": 6,
+    "name": "Parcare Publica Centru",
+    "region": "centru",
+    "places": 10,
+    "loadedIndices": 0.45,
+    "distance": 500
+  },
+  {
+    "id": 7,
+    "name": "Parcare Publica Centru",
+    "region": "centru",
+    "places": 10,
+    "loadedIndices": 0.45,
+    "distance": 50000
+  },
+  {
+    "id": 2,
+    "name": "Kirkland Common",
+    "region": "botanica",
+    "places": 20,
+    "loadedIndices": 0.3,
+    "distance": 200
+  },
+  {
+    "id": 3,
+    "name": "Knoll Down",
+    "region": "buiucani",
+    "places": 40,
+    "loadedIndices": 0.5,
+    "distance": 550
+  },
+  {
+    "id": 4,
+    "name": "Kirk Town",
+    "region": "rascani",
+    "places": 26,
+    "loadedIndices": 0.2,
+    "distance": 300
+  },
+  {
+    "id": 5,
+    "name": "Kingfisher Barton",
+    "region": "ciocana",
+    "places": 6,
+    "loadedIndices": 0.35,
+    "distance": 100
+  }
+]

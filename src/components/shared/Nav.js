@@ -14,6 +14,11 @@ function Nav() {
           About
         </Link>
       </li>
+      <li>
+        <Link id="parking" href="/parking" passHref>
+          Parking
+        </Link>
+      </li>
       <style>{`
         nav {
           display: flex;

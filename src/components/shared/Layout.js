@@ -5,7 +5,7 @@ import { IntlProvider } from 'react-intl';
 import { DefaultSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 import { isEmpty, mergeAll } from 'lodash/fp';
-import { Container, Header, Content, Footer } from 'rsuite';
+import { Container, Header, Content, Footer, FlexboxGrid } from 'rsuite';
 
 import constants from 'src/utils/constants';
 import metaProps from 'src/utils/metaProps';
@@ -81,7 +81,11 @@ const Layout = ({ children, query, wordingPage }) => {
             <Header>
               <Nav />
             </Header>
-            <Content>{children}</Content>
+            <Content>
+              <FlexboxGrid justify="center">
+                <FlexboxGrid.Item colspan={20}>{children}</FlexboxGrid.Item>
+              </FlexboxGrid>
+            </Content>
             <Footer />
           </Container>
         </ErrorBoundary>
