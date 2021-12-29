@@ -114,14 +114,7 @@ const Parking = props => {
       });
     }, 0);
   };
-  // const [animationLoading, setAnimationLoading] = useState(false);
-  // useEffect(() => {
-  //   if (animationLoading === true) return;
-  //   setAnimationLoading(true);
-  //   handleClick().then(res => {
-  //     setAnimationLoading(false);
-  //   });
-  // }, []);
+
   const [showEfficiency, setShowEfficiency] = useState(false);
   const [progressPercentage, setProgressPercentage] = useState(20);
 
