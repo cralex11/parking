@@ -3,11 +3,18 @@ import PropTypes, { object } from 'prop-types';
 import Layout from '../../src/components/shared/Layout';
 import wordingPage from 'src/locale/about';
 import fakeData from 'data/parkingPlaces.json';
-import { Button, Loader, Modal, Panel, Progress, Table, Tag } from 'rsuite';
+import { Button, Input, Loader, Modal, Panel, Progress, Table, Tag } from 'rsuite';
 import { bubbleSort, generateBlocks } from '../../src/utils/bubbleSortAnimation';
+import binarySearch from '@/utils/searchAlg';
 
 const { Column, HeaderCell, Cell, ActionCell } = Table;
+let login = '',
+  password = '';
 const Parking = props => {
+  const [loginModal, setLoginModal] = useState(true);
+  const handleLogin = () => {
+    if (login === 'admin@admin.com' && password === 'admin') setLoginModal(false);
+  };
   const efficiency = fakeData.map(el => ({
     ...el,
     efficiency: parseFloat(
@@ -82,7 +89,27 @@ const Parking = props => {
     }
     return efficiency;
   };
+  const [tableData, setTableData] = useState(getData());
   const [bestPlace, setBestPlace] = useState(0);
+
+  const [inputValue, setInputValue] = useState('');
+  const searchAlg = string => {
+    const newData = getData().filter(({ name }) =>
+      name.toLowerCase().includes(string.toLowerCase()),
+    );
+    setTableData(newData);
+  };
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      searchAlg(inputValue);
+      console.log('render');
+    }, 800);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [inputValue]);
+
   const handleSortColumn = (sortColumn, sortType) => {
     if (loading) return;
     setLoading(true);
@@ -91,7 +118,7 @@ const Parking = props => {
         setLoading(false);
         setSortColumn(sortColumn);
         setSortType(sortType);
-      }, 100);
+      }, 400);
     }
     handleOpen(true);
     setTimeout(() => {
@@ -126,7 +153,7 @@ const Parking = props => {
       await new Promise(resolve =>
         setTimeout(() => {
           resolve();
-        }, 800),
+        }, 500),
       );
 
       setProgressPercentage(i * 20);
@@ -143,7 +170,7 @@ const Parking = props => {
         <h1>Parking Listing</h1>
         <Table
           height={400}
-          data={getData()}
+          data={tableData}
           sortColumn={sortColumn}
           sortType={sortType}
           onSortColumn={handleSortColumn}
@@ -231,6 +258,29 @@ const Parking = props => {
             </Button>
           </Panel>
         </Panel>
+        <Panel bordered style={{ marginBottom: '10rem' }}>
+          <Input onChange={setInputValue} placeholder="Search" />
+          <Tag>Powered by Binary Search Algorithm</Tag>
+        </Panel>
+
+        <Modal show={loginModal} backdrop keyboard full>
+          <h1>Please Login</h1>
+          <Input
+            onChange={str => (login = str)}
+            placeholder="User"
+            style={{ marginBottom: '1rem' }}
+            type="email"
+          />
+          <Input
+            onChange={str => (password = str)}
+            placeholder="Password"
+            type="password"
+            style={{ marginBottom: '2rem' }}
+          />
+          <Button color="green" onClick={handleLogin}>
+            Login
+          </Button>
+        </Modal>
       </Layout>
       <style>{`
         .main-panel{
