@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Parcare Publica Centru",
+    "name": "Parcare Publica Centru nr1",
     "region": "centru",
     "places": 10,
     "loadedIndices": 0.45,
@@ -9,7 +9,7 @@
   },
   {
     "id": 6,
-    "name": "Parcare Publica Centru",
+    "name": "Parcare Publica Centru nr2",
     "region": "centru",
     "places": 10,
     "loadedIndices": 0.45,
@@ -17,27 +17,11 @@
   },
   {
     "id": 7,
-    "name": "Parcare Publica Centru",
+    "name": "Parcare Publica Centru nr3",
     "region": "centru",
     "places": 10,
     "loadedIndices": 0.45,
-    "distance": 50000
-  },
-  {
-    "id": 2,
-    "name": "Kirkland Common",
-    "region": "botanica",
-    "places": 20,
-    "loadedIndices": 0.3,
-    "distance": 200
-  },
-  {
-    "id": 3,
-    "name": "Knoll Down",
-    "region": "buiucani",
-    "places": 40,
-    "loadedIndices": 0.5,
-    "distance": 550
+    "distance": 5000
   },
   {
     "id": 4,
@@ -54,5 +38,77 @@
     "places": 6,
     "loadedIndices": 0.35,
     "distance": 100
+  },
+  {
+    "id": 8,
+    "name": "Parcarea Parkul Alunelu",
+    "region": "buiucani",
+    "places": 12,
+    "loadedIndices": 0.15,
+    "distance": 1000,
+    "link": "https://www.google.com/maps/place/Parcul+%E2%80%9DAlunelul%E2%80%9D/@47.0377756,28.8040688,18.28z/data=!4m5!3m4!1s0x0:0x15a7e876becb6b79!8m2!3d47.0381641!4d28.8049614"
+  },
+  {
+    "id": 9,
+    "name": "Zity Mall",
+    "region": "buiucani",
+    "places": 42,
+    "loadedIndices": 0.75,
+    "distance": 900,
+    "link": "https://www.google.com/maps/place/Zity+Mall/@47.037094,28.8016756,16.22z/data=!4m5!3m4!1s0x40c97d94e3377199:0xfe80c7d389ad0a71!8m2!3d47.039708!4d28.8035972"
+  },
+  {
+    "id": 10,
+    "name": "Eximbank",
+    "region": "buiucani",
+    "places": 8,
+    "loadedIndices": 0.71,
+    "distance": 1200,
+    "link": "https://www.google.com/maps/place/Eximbank/@47.03557,28.811731,16.87z/data=!4m5!3m4!1s0x40c97db8cc704273:0x1722eaa596b0715b!8m2!3d47.0362635!4d28.8142739"
+  },
+  {
+    "id": 11,
+    "name": "Judecătoria Chișinău, sediul Centru",
+    "region": "centru",
+    "places": 88,
+    "loadedIndices": 0.61,
+    "distance": 1600,
+    "link": "https://www.google.com/maps/place/Judec%C4%83toria+Chi%C8%99in%C4%83u,+sediul+Centru/@47.029879,28.8226019,17.42z/data=!4m5!3m4!1s0x40c97c3ac2cd1bcb:0xd48ca8dfb03b82a2!8m2!3d47.0294122!4d28.8262732"
+  },
+  {
+    "id": 12,
+    "name": "DAMIANILUX",
+    "region": "centru",
+    "places": 4,
+    "loadedIndices": 0.8,
+    "distance": 1900,
+    "link": "https://www.google.com/maps/place/DAMIANILUX/@47.0202203,28.8359615,17.7z/data=!4m5!3m4!1s0x40c97d49dafeff71:0x5a78db0859aa4dae!8m2!3d47.0216028!4d28.8373389"
+  },
+  {
+    "id": 14,
+    "name": "Kaufland Botanica",
+    "region": "botanica",
+    "places": 40,
+    "loadedIndices": 0.6,
+    "distance": 2450,
+    "link": "https://www.google.com/maps/place/Kaufland+Charging+Station/@47.0018246,28.8389246,16.79z/data=!4m5!3m4!1s0x40c97fd4db32c2c5:0x26483807265fc526!8m2!3d47.0001968!4d28.8404799"
+  },
+  {
+    "id": 15,
+    "name": "Shopping MallDova",
+    "region": "botanica",
+    "places": 30,
+    "loadedIndices": 0.7,
+    "distance": 2100,
+    "link": "https://www.google.com/maps/place/Shopping+MallDova/@47.0001554,28.8378857,15.84z/data=!4m5!3m4!1s0x40c97ea01a3e6089:0x8b7bd74bc15dd0cf!8m2!3d47.0046143!4d28.8407153"
+  },
+  {
+    "id": 16,
+    "name": "Novamed",
+    "region": "botanica",
+    "places": 20,
+    "loadedIndices": 0.2,
+    "distance": 2300,
+    "link": "https://www.google.com/maps/place/Novamed/@46.9896017,28.8299227,14.85z/data=!4m5!3m4!1s0x40c97eb8f28154a3:0x8320c6a6d35626d4!8m2!3d46.9885278!4d28.8343022"
   }
 ]

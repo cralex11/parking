@@ -83,7 +83,7 @@ async function bubbleSort(delay = 100) {
 
     blocks[blocks.length - i - 1].style.backgroundColor = '#13CE66';
   }
-  return parseInt(blocks[blocks.length - 1].children[0].innerText);
+  return parseFloat(blocks[blocks.length - 1].children[0].innerText);
 }
 
 export { bubbleSort, generateBlocks };

@@ -6,7 +6,7 @@ import fakeData from 'data/parkingPlaces.json';
 import { Button, Loader, Modal, Panel, Progress, Table, Tag } from 'rsuite';
 import { bubbleSort, generateBlocks } from '../../src/utils/bubbleSortAnimation';
 
-const { Column, HeaderCell, Cell } = Table;
+const { Column, HeaderCell, Cell, ActionCell } = Table;
 const Parking = props => {
   const efficiency = fakeData.map(el => ({
     ...el,
@@ -155,11 +155,11 @@ const Parking = props => {
             <Cell dataKey="id" />
           </Column>
           <Column width={200} fixed>
-            <HeaderCell>Name</HeaderCell>
+            <HeaderCell>Denumire</HeaderCell>
             <Cell dataKey="name" />
           </Column>
           <Column width={200}>
-            <HeaderCell>region</HeaderCell>
+            <HeaderCell>Regiune</HeaderCell>
             <Cell dataKey="region" />
           </Column>
           {showEfficiency && progressPercentage === 100 && (
@@ -171,16 +171,38 @@ const Parking = props => {
             </Column>
           )}
           <Column width={200} sortable>
-            <HeaderCell>places</HeaderCell>
+            <HeaderCell>Locuri de parcare</HeaderCell>
             <Cell dataKey="places" />
           </Column>
           <Column width={200} sortable>
-            <HeaderCell>loadedIndices</HeaderCell>
+            <HeaderCell>Index de supraincarcare</HeaderCell>
             <Cell dataKey="loadedIndices" />
           </Column>
           <Column width={200} sortable>
-            <HeaderCell>distance</HeaderCell>
+            <HeaderCell>Distanta</HeaderCell>
             <Cell dataKey="distance" />
+          </Column>
+          <Column width={200} sortable>
+            <HeaderCell>Deschide mapa</HeaderCell>
+            <Cell dataKey="link" className="no-padding">
+              {({ link }, rowIndex) => {
+                return (
+                  <a href={link}>
+                    {link ? (
+                      <img
+                        style={{ width: 'auto', height: '35px', objectFit: 'cover' }}
+                        src="https://img.icons8.com/color/48/000000/google-maps-new.png"
+                      />
+                    ) : (
+                      <img
+                        style={{ width: 'auto', height: '35px', objectFit: 'cover' }}
+                        src="https://img.icons8.com/ios-filled/48/000000/google-maps-new.png"
+                      />
+                    )}
+                  </a>
+                );
+              }}
+            </Cell>
           </Column>
         </Table>
         <Panel shaded header="Checking for Best Result" className="main-panel">
