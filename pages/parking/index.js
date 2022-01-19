@@ -8,9 +8,10 @@ import { bubbleSort, generateBlocks } from '../../src/utils/bubbleSortAnimation'
 import binarySearch from '@/utils/searchAlg';
 import Link from 'next/link';
 import cipher from '@/utils/encrypt';
-const loginEnc = cipher('12.24.43.23', 'admin@admin.com');
-const passwordEnc = cipher('12.24.43.23', 'admin');
 const encKey = '12.24.43.23';
+
+const loginEnc = cipher(encKey, 'admin@admin.com');
+const passwordEnc = cipher(encKey, 'admin');
 const { Column, HeaderCell, Cell, ActionCell } = Table;
 let login = '',
   password = '';
