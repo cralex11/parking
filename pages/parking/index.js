@@ -6,6 +6,7 @@ import fakeData from 'data/parkingPlaces.json';
 import { Button, Input, Loader, Modal, Panel, Progress, Table, Tag } from 'rsuite';
 import { bubbleSort, generateBlocks } from '../../src/utils/bubbleSortAnimation';
 import binarySearch from '@/utils/searchAlg';
+import Link from 'next/link';
 
 const { Column, HeaderCell, Cell, ActionCell } = Table;
 let login = '',
@@ -280,6 +281,11 @@ const Parking = props => {
           <Button color="green" onClick={handleLogin}>
             Login
           </Button>
+          <Link id="home" href="/" passHref>
+            <Button color="blue" style={{ marginLeft: '1rem' }} onClick={handleLogin}>
+              Back
+            </Button>
+          </Link>
         </Modal>
       </Layout>
       <style>{`

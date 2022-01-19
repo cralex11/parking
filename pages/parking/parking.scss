@@ -35,3 +35,69 @@
 .no-padding .rs-table-cell-content{
   padding: 0!important;
 }
+
+.gb-img{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: url("../../src/styles/bg.png") center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+
+  &:after{
+    content: "iParking le permite șoferilor să găsească cea mai apropiată parcare de destinație, le spune regiunea, numărul locurilor de parcare și distanța... ceea ce înseamnă că nu mai e nevoie să circuli în căutarea parcării!";
+    color: #fff;
+    top: 30%;
+    margin: 0 4rem;
+    position: fixed;
+    font-size: 22px;
+    //font-family: "open-sanscondensed-light", sans-serif;
+    font-weight: 300;
+    z-index: 1;
+  }
+
+  z-index: 0;
+}
+
+#p-wrapper{
+
+  position: fixed;
+  z-index: 2;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 20px 35px;
+  top: 54%;
+  left: 50%;
+  transform: translateX(-36px);
+  border-radius: 10px;
+  transition: .2s ease-out;
+  cursor: pointer;
+
+  a{
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: .2s ease-out;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      top: -1rem;
+      bottom:  -1rem;
+      left: -1rem;
+      right:  -1rem;
+    }
+  }
+  &:hover{
+    background: #fff;
+  }
+  &:hover a{
+    color: #000000;
+  }
+}

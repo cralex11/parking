@@ -78,9 +78,7 @@ const Layout = ({ children, query, wordingPage }) => {
       >
         <ErrorBoundary errorLevel={constants.ERRORS_LEVELS.layout}>
           <Container>
-            <Header>
-              <Nav />
-            </Header>
+            <Header>{/*<Nav />*/}</Header>
             <Content>
               <FlexboxGrid justify="center">
                 <FlexboxGrid.Item colspan={20}>{children}</FlexboxGrid.Item>
