@@ -7,14 +7,17 @@ import { Button, Input, Loader, Modal, Panel, Progress, Table, Tag } from 'rsuit
 import { bubbleSort, generateBlocks } from '../../src/utils/bubbleSortAnimation';
 import binarySearch from '@/utils/searchAlg';
 import Link from 'next/link';
-
+import cipher from '@/utils/encrypt';
+const loginEnc = cipher('12.24.43.23', 'admin@admin.com');
+const passwordEnc = cipher('12.24.43.23', 'admin');
+const encKey = '12.24.43.23';
 const { Column, HeaderCell, Cell, ActionCell } = Table;
 let login = '',
   password = '';
 const Parking = props => {
   const [loginModal, setLoginModal] = useState(true);
   const handleLogin = () => {
-    if (login === 'admin@admin.com' && password === 'admin') setLoginModal(false);
+    if (login === loginEnc && password === passwordEnc) setLoginModal(false);
   };
   const efficiency = fakeData.map(el => ({
     ...el,
@@ -267,13 +270,13 @@ const Parking = props => {
         <Modal show={loginModal} backdrop keyboard full>
           <h1>Please Login</h1>
           <Input
-            onChange={str => (login = str)}
+            onChange={str => (login = cipher(encKey, str))}
             placeholder="User"
             style={{ marginBottom: '1rem' }}
             type="email"
           />
           <Input
-            onChange={str => (password = str)}
+            onChange={str => (password = cipher(encKey, str))}
             placeholder="Password"
             type="password"
             style={{ marginBottom: '2rem' }}
